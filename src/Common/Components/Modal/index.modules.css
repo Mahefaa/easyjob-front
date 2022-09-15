@@ -7,12 +7,12 @@
     position: fixed;
     top: 50%;
     right: 50%;
-    left: 50%;
+    left: 55%;
     transform:translate(-50%,-50%);
     z-index: 999;
     background-color:aliceblue;
-    width: 40vw;
-    height: fit-content;
+    width: 80vw;
+    height: 40vw;
     opacity: 1;
     justify-items: center;
 }
@@ -28,8 +28,4 @@
 }
 input{
     height: 5vh;
-}
-select{
-    height: 5vh;
-    margin: 5vh;
 }

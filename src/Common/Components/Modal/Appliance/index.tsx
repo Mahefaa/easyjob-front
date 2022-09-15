@@ -3,7 +3,6 @@ import {Appliance} from "../../../Types/Appliance";
 import {createOrUpdateData, getData} from "../../../../Providers/dataProvider";
 import {Offer} from "../../../Types/Offer";
 import {getUserId} from "../../../../Providers/userDetailsProvider";
-import Input from "../../Input";
 
 const ApplianceModal: React.FC<{ appliance: Appliance }> = (props) => {
     const [data, setData] = useState<Appliance>(props.appliance);
