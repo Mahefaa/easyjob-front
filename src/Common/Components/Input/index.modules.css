@@ -1,0 +1,22 @@
+.login__input, #login__password, #login__username,#login__password__confirm{
+    border-color: transparent transparent white;
+    background: transparent;
+    color: whitesmoke;
+}
+input{
+    width: 100%;
+}
+#login__username, #login__password,#login__password__confirm{
+    background: transparent;
+    align-self: center;
+}
+span{
+    padding: 10px;
+    margin: 15px;
+    position:relative;
+}
+.login__button{
+    padding: 10px;
+    color: black;
+    font-size: 14px;
+}

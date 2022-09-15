@@ -1,0 +1,57 @@
+.navigation {
+    width: 100%;
+    background-color: black;
+}
+
+img {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+}
+
+.logout {
+    font-size: .8em;
+    font-family: sans-serif;
+    position: relative;
+    right: -18px;
+    bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    width: 260px;
+}
+
+.menu {
+    text-decoration: none;
+    float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 25px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden;
+    max-height: 250px;
+}
+.menu:hover {
+    width: max-content;
+    animation: touch-me 1 linear 60ms;
+}
+
+.menu:hover .logout{
+    opacity: .9;
+}
+@keyframes touch-me {
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: black;
+    }
+}
+
+
+

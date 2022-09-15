@@ -1,0 +1,14 @@
+.search__bar {
+    width: 100px;
+}
+
+#choice__button {
+    width: 100px;
+}
+
+tbody tr td:first-child:hover {
+    background-color: black;
+    cursor:grab;
+    color: white;
+    opacity: 0.6;
+}

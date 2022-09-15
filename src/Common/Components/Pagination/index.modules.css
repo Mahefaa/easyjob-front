@@ -1,0 +1,6 @@
+select{
+    width: 100px;
+}
+input[type="number"]{
+    width: 100px;
+}

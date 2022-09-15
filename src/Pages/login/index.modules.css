@@ -1,0 +1,52 @@
+.login__card{
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#ad5389,#3c1053);
+    position: relative;
+}
+.login__form{
+    display: grid;
+    margin-top:5%;
+    border: 2px solid transparent;
+    border-radius: 10%;
+    background: transparent;
+    box-shadow: 10px 10px 10px 5px black;
+}
+.login__form{
+    border-color: transparent transparent white;
+    background: transparent;
+    color: whitesmoke;
+}
+.icons{
+    display: flex;
+}
+.icons *{
+    padding: 5px;
+    margin: 10px;
+}
+.icons *:hover{
+    border-bottom: 2px solid;
+}
+.icons .blue:hover{
+    border-color: blue;
+    color: blue;
+}
+.red:hover{
+    border-color: red;
+    color: red;
+}
+.black:hover{
+    border-color: black;
+    color: black;
+}
+i[aria-disabled=true]{
+    pointer-events: none;
+}
+.option:hover{
+    border-bottom: 2px solid greenyellow;
+    font-size: large;
+}

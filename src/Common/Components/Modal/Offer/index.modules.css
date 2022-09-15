@@ -1,0 +1,12 @@
+.inputs input[type="text"] {
+    width: 100%;
+    border-block-color: black;
+}
+
+.inputs {
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+}
