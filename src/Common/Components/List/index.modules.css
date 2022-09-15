@@ -1,23 +1,25 @@
 .mainTable {
-    width: calc(87vw - 300px);
+    width: calc(100vw - 300px);
     border-collapse: collapse;
-    margin: 1%;
+    margin-left:10vw;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 10vw;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 8vw;
+    max-height: 10vh;
 }
 
 .mainTable th, .mainTable td {
     padding: 10px 20px;
+    text-align: center;
 }
 
 .mainTable tbody tr {
     border-bottom: thin solid #dddddd;
     background-color: #f3f3f3;
-
 }
-
 @media screen and (max-device-width: 850px) {
     .mainTable {
         width: 50%;

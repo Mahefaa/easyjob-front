@@ -4,3 +4,7 @@ select{
 input[type="number"]{
     width: 100px;
 }
+.pagination{
+    position: fixed;
+    top: 10px;
+}

@@ -4,9 +4,9 @@ import {useNavigate} from "react-router-dom";
 import Loading from "../../Common/Components/Loading";
 import Input from "../../Common/Components/Input";
 import {authentify} from "../../Providers/authProvider";
-import {getLocalData, saveData} from "../../Providers/localStorageData";
+import {saveData} from "../../Providers/localStorageData";
 import {User} from "../../Common/Types/User";
-import {Role} from "../../Common/Types/Role";
+import {createDataAnonymously} from "../../Providers/dataProvider";
 
 const Login: React.FC<{}> = (props) => {
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Login: React.FC<{}> = (props) => {
     const [isLoading, setLoading] = useState<boolean>(false);
     const [create, setCreate] = useState<boolean>(false);
     const [confirmPass, setConfirmPass] = useState<string>("");
-    const [role,setRole] = useState<Role>(Role.CANDIDATE);
+    const [role,setRole] = useState<string>("candidates");
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>, setter: Dispatch<SetStateAction<string>>) => {
         setter(event.target.value);
     }
@@ -69,9 +69,9 @@ const Login: React.FC<{}> = (props) => {
                             onChange={(event) => handleChange(event, setConfirmPass)}
                             disabled={isLoading}
                         />
-                        <select>
-                            <option value={Role.CANDIDATE}>CANDIDATE</option>
-                            <option value={Role.RECRUITER}>RECRUITER</option>
+                        <select onChange={(event)=>setRole(event.target.value)} defaultValue={role}>
+                            <option value={"candidates"}>CANDIDATE</option>
+                            <option value={"recruiters"}>RECRUITER</option>
                         </select>
                     </>
                 }
@@ -86,6 +86,12 @@ const Login: React.FC<{}> = (props) => {
                             setMessage("passwords don't match");
                         }
                         else if(create){
+                            createDataAnonymously(`/users/${role}`,{
+                                email:username,
+                                password
+                            })
+                                .then(sign)
+                                .catch((error)=>alert(error.message))
                         }
                         else {
                             setMessage("");

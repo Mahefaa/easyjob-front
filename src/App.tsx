@@ -8,6 +8,7 @@ import Appliances from "./Pages/appliances";
 import Domains from "./Pages/domains";
 import ProtectedRoutes, {AnonymousRoutes} from "./Utils/ProtectedRoutes";
 import {getUserId} from "./Providers/userDetailsProvider";
+import Messages from "./Pages/Messages";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path={"home"} element={<ProtectedRoutes/>}>
+                        <Route path={"messages"} element={<Messages/>}/>
                         <Route path={"appliances"}>
                             <Route path={""} element={<Appliances/>}/>
                         </Route>

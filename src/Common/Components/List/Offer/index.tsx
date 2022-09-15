@@ -4,7 +4,7 @@ import {getData} from "../../../../Providers/dataProvider";
 import {getLocalData} from "../../../../Providers/localStorageData";
 import {getUserId} from "../../../../Providers/userDetailsProvider";
 import './index.modules.css'
-import {Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const OfferList: React.FC<{
     offers: Offer[],

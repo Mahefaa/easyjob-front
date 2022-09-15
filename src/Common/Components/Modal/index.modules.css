@@ -1,18 +1,19 @@
 #formID{
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
     z-index: 999;
     background-color:aliceblue;
-    width: 80vw;
+    width: 40vw;
     height: fit-content;
-    opacity: 0.90;
+    opacity: 1;
     justify-items: center;
 }
 #formId:hover{
@@ -24,4 +25,7 @@
 }
 .close__btn{
     z-index: 999;
+}
+input{
+    height: 5vh;
 }

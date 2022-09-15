@@ -6,6 +6,9 @@ import {getData} from "../../Providers/dataProvider";
 import {User} from "../../Common/Types/User";
 import UserList from "../../Common/Components/List/User";
 import Body from "../../Common/Components/Body";
+import Modal from "../../Common/Components/Modal";
+import OfferModal from "../../Common/Components/Modal/Offer";
+import UserModal from "../../Common/Components/Modal/User";
 
 const Users: React.FC = () => {
     const [users, setUsers] = useState<User[]>([]);
@@ -32,6 +35,11 @@ const Users: React.FC = () => {
     return (
         <Body children={
             <>
+                {isShown && <Modal setIsShown={setIsShown} children={
+                    <div className={"container"}>
+                        <UserModal user={user}/>
+                    </div>
+                }/>}
                 <List children={
                     <>
                         <input id={"add__button"} type={"button"} value={"add"} onClick={() => {

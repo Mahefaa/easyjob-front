@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-import Header from "../../Common/Components/Header";
-import Footer from "../../Common/Components/Footer";
 import List from "../../Common/Components/List";
 import {Offer} from "../../Common/Types/Offer";
 import {getData} from "../../Providers/dataProvider";
@@ -43,8 +41,8 @@ const Offers: React.FC = (props) => {
                     id={"choice__button"}
                     type={"button"}
                     defaultValue={"My Offers"}
-                    onClick={() => setFilter((prevState)=>{
-                        if(prevState===getLocalData("email")){
+                    onClick={() => setFilter((prevState) => {
+                        if (prevState === getLocalData("email")) {
                             return "";
                         }
                         return getLocalData("email") as string;
@@ -52,7 +50,7 @@ const Offers: React.FC = (props) => {
                 />
                 <List children={
                     <>
-                        <input id={"add__button"} type={"button"} value={"add"} onClick={() =>{
+                        <input id={"add__button"} type={"button"} value={"add"} onClick={() => {
                             setOffer({} as Offer);
                             setIsShown(true)
                         }}/>

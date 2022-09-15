@@ -18,9 +18,6 @@ const Modal: React.FC<{
                  window.removeEventListener("click", onClick);
              }}
         >
-            <span className={"close__button"}>
-                <input type={"button"} defaultValue={"close"} onClick={onClick}/>
-            </span>
             <form id={"formID"}>
                 {children}
             </form>

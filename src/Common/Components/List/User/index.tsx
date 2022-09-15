@@ -25,7 +25,7 @@ const UserList: React.FC<{users:User[]}> = (props) => {
                     <td>{offer.role}</td>
                     <td>{offer.joinedInstant}</td>
                     <td>{offer.role}</td>
-                    <td>{offer.enabled}</td>
+                    <td>{offer.enabled?"true":"false"}</td>
                 </tr>
             ))}
             </tbody>

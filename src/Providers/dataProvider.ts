@@ -23,7 +23,14 @@ export const createOrUpdateData: (url: string, data?: any) => AxiosPromise = (ur
         data
     });
 }
-export const createData: (url: string, params?: any, data?: any) => AxiosPromise = (url, params, data) => {
+export const createDataAnonymously: (url: string, data?: any) => AxiosPromise = (url, data) => {
+    return axiosPromise({
+        url,
+        method: "post",
+        data
+    });
+}
+export const createData: (url: string, data?: any) => AxiosPromise = (url, data) => {
     return axiosPromise({
         url,
         headers: {

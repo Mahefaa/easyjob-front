@@ -1,13 +1,10 @@
 import React from "react";
 import './index.modules.css'
-import Message from "../Messages";
 import {logout} from "../../../Providers/authProvider";
 import {useNavigate} from "react-router-dom";
-import Navbar from "../Navbar";
 
 const Header: React.FC<{}> = () => {
     const navigate = useNavigate();
-    // should add this here{<Message shown={true}/>}
     return (
         <header className="navigation">
             <div className="menu">

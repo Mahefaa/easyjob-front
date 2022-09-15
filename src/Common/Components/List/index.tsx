@@ -12,13 +12,13 @@ const List: React.FC<{
         <div className={"container"}>
             <span className={"pagination"}>
                 <Pagination setPage={setPage} setSize={setSize}/>
+                <input
+                    type={"text"}
+                    placeholder={"search . . ."}
+                    onChange={(event) => setFilter(event.target.value)}
+                    className={"search__bar"}
+                />
             </span>
-            <input
-                type={"text"}
-                placeholder={"search . . ."}
-                onChange={(event) => setFilter(event.target.value)}
-                className={"search__bar"}
-            />
             <table className={"mainTable"}>
                 {children}
             </table>

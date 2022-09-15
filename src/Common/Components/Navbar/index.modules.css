@@ -1,19 +1,27 @@
 nav.navbar{
     display: flex;
-    gap: 10vw;
-    margin: 0 5vw 0 5vw;
+    flex-direction: column;
     border: 2px solid black;
-    width: 90vw;
-    height: 10vh;
-    background-color: rosybrown;
+    gap: 10vh;
+    width: 10vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 50%;
+}
+.current{
+    opacity: 100%;
 }
 .link{
+    width: 100px;
     align-self: center;
     text-decoration: none;
-    color: black;
-    border: 2px solid black;
+    color: white;
+    height: fit-content;
     border-box:2px 10px 10px 2px;
 }
+.link:hover{
+    background-color: black;
+}
 nav.navbar :first-child{
-    margin-left: 20vw;
+    margin-top: 10vw;
 }
