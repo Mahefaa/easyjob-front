@@ -1,8 +1,6 @@
 import axiosPromise from "./axios";
 import {getAuthorization} from "./authProvider";
 import {AxiosPromise} from "axios";
-import {Offer} from "../Common/Types/Offer";
-import {Appliance} from "../Common/Types/Appliance";
 
 export const getData = (url: string, params?: any) => {
     return axiosPromise({

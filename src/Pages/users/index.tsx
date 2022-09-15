@@ -1,13 +1,10 @@
 import React, {useEffect, useState} from "react";
-import Header from "../../Common/Components/Header";
 import List from "../../Common/Components/List";
-import Footer from "../../Common/Components/Footer";
 import {getData} from "../../Providers/dataProvider";
 import {User} from "../../Common/Types/User";
 import UserList from "../../Common/Components/List/User";
 import Body from "../../Common/Components/Body";
 import Modal from "../../Common/Components/Modal";
-import OfferModal from "../../Common/Components/Modal/Offer";
 import UserModal from "../../Common/Components/Modal/User";
 
 const Users: React.FC = () => {

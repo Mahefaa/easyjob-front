@@ -10,7 +10,7 @@ const Messages: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [pageSize, setPageSize] = useState<number>(25);
     const [date, setDate] = useState<string>("");
-    //to implement : filter by date
+    //TODO: implement : filter by date
     useEffect(() => {
         getData(`users/${getUserId()}/messages`,{
             page,

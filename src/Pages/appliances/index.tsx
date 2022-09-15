@@ -25,53 +25,52 @@ const Appliances: React.FC<{}> = (props) => {
     useEffect(() => {
         getData(
             url,
-            {
-                page,
+        {
+            page,
                 pageSize,
                 domainName,
                 status
-            }
+        }
         ).then((data) => setAppliances(data.data as Appliance[]))
             .catch((e) => alert(e.message))
     }, [page, pageSize, url, domainName, status])
     return (
-        <Body children={
-            <>
-                {isShown && <Modal setIsShown={setIsShown} children={
-                    <div className={"container"}>
-                        <ApplianceModal appliance={appliance}/>
-                    </div>
-                }/>}
-                <h3> My Appliances</h3>
-                <List
-                    children={
-                        <>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <input id={"add__button"} type={"button"} value={"add"} onClick={() => {
-                                        setAppliance({} as Appliance);
-                                        setIsShown(true)
-                                    }}/>
-                                    <select onChange={(event) => setStatus(event.target.value)}>
-                                        <option value={""}>ALL</option>
-                                        <option value={"ONGOING"}>ONGOING</option>
-                                        <option value={"APPROVED"}>APPROVED</option>
-                                        <option value={"REJECTED"}>REJECTED</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            </tbody>
-                            <ApplianceList readonly={readonly} appliances={appliances} setIsShown={setIsShown}
-                                           setAppliance={setAppliance}/>
-                        </>
-                    }
-                    setPage={setPage}
-                    setSize={setPageSize}
-                    setFilter={setDomainName}
-                />
-            </>
-        }/>
+            <Body children={
+                <>
+                    {isShown && <Modal setIsShown={setIsShown} children={
+                        <div className={"container__modal"}>
+                            <ApplianceModal appliance={appliance}/>
+                        </div>
+                    }/>}
+                    <List
+                        children={
+                            <>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <input id={"add__button"} type={"button"} value={"add"} onClick={() => {
+                                            setAppliance({} as Appliance);
+                                            setIsShown(true)
+                                        }}/>
+                                        <select onChange={(event) => setStatus(event.target.value)}>
+                                            <option value={""}>ALL</option>
+                                            <option value={"ONGOING"}>ONGOING</option>
+                                            <option value={"APPROVED"}>APPROVED</option>
+                                            <option value={"REJECTED"}>REJECTED</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <ApplianceList readonly={readonly} appliances={appliances} setIsShown={setIsShown}
+                                               setAppliance={setAppliance}/>
+                            </>
+                        }
+                        setPage={setPage}
+                        setSize={setPageSize}
+                        setFilter={setDomainName}
+                    />
+                </>
+            }/>
     )
 }
 export default Appliances;

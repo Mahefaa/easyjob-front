@@ -8,7 +8,7 @@ import Appliances from "./Pages/appliances";
 import Domains from "./Pages/domains";
 import ProtectedRoutes, {AnonymousRoutes} from "./Utils/ProtectedRoutes";
 import {getUserId} from "./Providers/userDetailsProvider";
-import Messages from "./Pages/Messages";
+import Messages from "./Pages/messages";
 
 function App() {
     return (

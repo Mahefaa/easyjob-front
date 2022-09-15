@@ -9,7 +9,7 @@ const List: React.FC<{
 }> = (props) => {
     const {children, setPage, setSize,setFilter} = props;
     return (
-        <div className={"container"}>
+        <div className={"list__container"}>
             <span className={"pagination"}>
                 <Pagination setPage={setPage} setSize={setSize}/>
                 <input

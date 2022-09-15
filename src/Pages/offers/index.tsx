@@ -37,17 +37,6 @@ const Offers: React.FC = (props) => {
                         <OfferModal offer={offer}/>
                     </div>
                 }/>}
-                <input
-                    id={"choice__button"}
-                    type={"button"}
-                    defaultValue={"My Offers"}
-                    onClick={() => setFilter((prevState) => {
-                        if (prevState === getLocalData("email")) {
-                            return "";
-                        }
-                        return getLocalData("email") as string;
-                    })}
-                />
                 <List children={
                     <>
                         <input id={"add__button"} type={"button"} value={"add"} onClick={() => {

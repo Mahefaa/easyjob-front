@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {getData} from "../../Providers/dataProvider";
-import Header from "../../Common/Components/Header";
 import List from "../../Common/Components/List";
-import Footer from "../../Common/Components/Footer";
 import DomainList from "../../Common/Components/List/Domain";
 import {Domain} from "../../Common/Types/Domain";
 import Modal from "../../Common/Components/Modal";

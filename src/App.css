@@ -11,4 +11,5 @@
   height: 100vh;
   background:rgb(102,183,182);
   flex-direction: column;
+  overflow-y: hidden;
 }

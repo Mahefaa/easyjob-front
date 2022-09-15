@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {createOrUpdateData} from "../../../../Providers/dataProvider";
 import {User} from "../../../Types/User";
-import {Role} from "../../../Types/Role";
 import {getLocalData} from "../../../../Providers/localStorageData";
 
 const UserModal: React.FC<{ user: User }> = (props) => {

@@ -29,3 +29,7 @@
 input{
     height: 5vh;
 }
+select{
+    height: 5vh;
+    margin: 5vh;
+}
