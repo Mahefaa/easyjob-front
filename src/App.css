@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.body{
+  width: 100vw;
+  height: 100vh;
+  background:rgb(102,183,182);
+  overflow-y: hidden;
+  flex-direction: column;
+}

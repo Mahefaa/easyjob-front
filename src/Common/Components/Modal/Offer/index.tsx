@@ -41,8 +41,8 @@ const OfferModal: React.FC<{
             </span>
             <span>
                 <p>Mission</p>
-                <input type={"text"}
-                       onChange={(event) => setData((prevState) => {
+                <textarea
+                    onChange={(event) => setData((prevState) => {
                            prevState.mission = event.target.value
                            return prevState;
                        })}
@@ -52,7 +52,7 @@ const OfferModal: React.FC<{
             </span>
             <span>
                 <p>Position</p>
-                <input type={"text"}
+                <textarea
                        onChange={(event) => setData((prevState) => {
                            prevState.position = event.target.value
                            return prevState;
@@ -63,7 +63,7 @@ const OfferModal: React.FC<{
             </span>
             <span>
                 <p>Profile</p>
-                <input type={"text"}
+                <textarea
                        onChange={(event) => setData((prevState) => {
                            prevState.profile = event.target.value
                            return prevState;
